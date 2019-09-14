@@ -54,9 +54,16 @@
 
     <section>
       <h2>Фильтр:</h2>
-      <h3>Цена:</h3>
-      <!-- Не знаю как сделать этот блок -->
       <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Цена:</legend>
+          <div>
+            <button></button>
+            <button></button>
+          </div>
+          <input type="number" name="min-price" min="0" max="35000" placeholder="0">
+          <input type="number" name="max-price" min="0" max="35000" placeholder="30000">
+        </fieldset>
         <fieldset>
           <legend>Производители:</legend>
           <ul>
@@ -79,7 +86,7 @@
     </section>
 
     <section>
-      <h2>Список товаров</h2>
+      <h2 class="visually-hidden">Список товаров</h2>
       <div>
         <h3>Сортировка:</h3>
         <ul>
