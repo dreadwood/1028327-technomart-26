@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.modal {
+  display: none;
+}
+
+.main-header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+
+  background-color: #f3f7f8;
+}
+
+.header-top {
+  background-color: #293449;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
+
+  background-color: #EE3643;
+  border-bottom: 5px solid #B52932;
+}
+
+.header-top .logo:hover,
+.header-top .logo:focus {
+  background-color: #CA2C37;
+}
+
+.header-top .logo:active {
+  background-color: #BA2732;
+}
+
+
+.header-top .search,
+.header-top .link {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
+
+  background-color: #293449;
+  border: none;
+}
+
+.header-top .link:hover,
+.header-top .search:focus,
+.header-top .link:hover,
+.header-top .search:focus {
+  background-color: #212A3A;
+}
+
+.header-top .link:active {
+  background-color: #161D29;
+}
+
+.header-top input[type="search"]::placeholder {
+  color: #ffffff;
+}
+/* как задать смену цвета при наведении?*/
+.header-top .search:hover,
+.header-top .search:focus {
+  background-color: #212A3A;
+}
+
+.header-top .search:active {
+  background-color: #ffffff;
+}
+
+.header-top .link-order {
+  background-color: #63A63E;
+}
+
+.header-top .link-order:hover,
+.header-top .link-order:focus {
+  background-color: #5FBB2D;
+}
+
+.header-top .link-order:active {
+  background-color: #518534;
+}
+
+.slogan {
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: #EE3643;
+}
+
+.header-tel {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+
+  color: #EE3643;
+  border: 3px solid #ffffff;
+}
+
+.header-adress {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.user-navigation {
+  list-style: none;
+}
+
+.user-navigation li {
+  background-color: #ffffff;
+}
+
+.button-login,
+.button-registration {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.button-login:hover,
+.button-registration:hover,
+.button-login:focus,
+.button-registration:focus {
+  color: #EE3643;
+}
+
+.button-login:active,
+.button-registration:active {
+  color: #B2B2B2;
+}
+
+.site-navigation {
+  list-style: none;
+
+  background-color: #32425C;
+  box-shadow: 0 -5px #293449 inset;
+}
+
+.site-navigation a {
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  background-color: #293449;
+}
+
+.site-navigation a:active {
+  color: #8E939C;
+
+  background-color: #1D2739;
+}
+
+.about-company h3 {
+  font-family:  "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.about-company ul {
+  font-family:  "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: 400;
+
+  list-style: none;
+}
+
+.button {
+  font-family:  "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  background-color: #EE3643;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #CA2C37;
+}
+
+.button:active {
+  background-color: #BA2732;
+}
+
+.main-footer {
+  font-family:  "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+
+  background-color: #32425C;
+}
+
+.footer-navigation {
+  list-style: none;
+}
+
+.footer-navigation a {
+  color: #ffffff;
+}
+
+.footer-navigation a:hover,
+.footer-navigation a:focus {
+  text-decoration: underline;
+}
+/* Не работает */
+.footer-navigation a:active {
+  color: #F1F5F7;
+}
+
+.navigation-catalog {
+  list-style: none;
+}
+.navigation-catalog a {
+  color: #FFD180;
+}
+
+.navigation-catalog a:hover,
+.navigation-catalog a:focus {
+  text-decoration: underline;
+}
+/* Не работает */
+.navigation-catalog a:active {
+  color: #FFD180;
+}
+
+.footer-contacts {
+  font-size: 16px;
+  line-height: 18px;
+
+  background-color: #293449;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social {
+  list-style: none;
+}
+
+.social-button {
+  color: #FFFFFF;
+
+  background-color: #212A3A;
+}
+
+.social-button:hover,
+.social-button:focus,
+.social-button:active {
+  background-color: #EE3643;
+}
+
+.contact-link a {
+  color: #FFD180;
+}
+
+.contact-link a:hover,
+.contact-link a:focus {
+  text-decoration: underline;
+}
+
+.contact-link a:active {
+  color: #EE3643;
+  text-decoration: none;
+}
