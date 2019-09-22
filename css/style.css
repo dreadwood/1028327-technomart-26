@@ -73,12 +73,12 @@ a {
 .header-top input[type="search"]::placeholder {
   color: #ffffff;
 }
-/* как задать смену цвета при наведении?*/
+
 .header-top .search:hover,
 .header-top .search:focus {
   background-color: #212A3A;
 }
-
+/* как задать смену цвета при активной строке поиска? */
 .header-top .search:active {
   background-color: #ffffff;
 }
@@ -205,6 +205,185 @@ a {
   background-color: #BA2732;
 }
 
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: #000000;
+  line-height: 18px;
+}
+
+.page-catalog h1 {
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #32425C;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+
+  background-color: #F2F6F8;
+}
+.filters h2 {
+  color: #000000;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  background-color: #F7F3EC;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  color: #000000;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter li {
+  list-style: none;
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.filter .price-slider {
+  background-color: #F7F3EC
+}
+
+.filter input[name$=price] {
+  background-color: #F7F3EC
+}
+
+.filter-button {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: 1px solid #E5E5E5;
+}
+
+.catalog-list li {
+  list-style: none;
+  border: 1px solid #E5E5E5;
+}
+
+.catalog-list li:hover,
+.catalog-list li:focus {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.catalog-list h3 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.old-price {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.price {
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #EE3643;
+}
+
+.button-buy {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #63A63E;
+  box-shadow: 0 -3px #367315 inset;
+}
+
+.button-buy:hover,
+.button-buy:focus {
+  background-color: #5FBB2D;
+}
+
+.button-buy:active {
+  background-color: #518534;
+  box-shadow: none;
+}
+
+.button-bookmark {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #32425C;
+
+  border: 3px solid #63A63E;
+}
+
+.button-bookmark:hover,
+.button-bookmark:focus {
+  border: 3px solid #32425C;
+}
+
+.button-bookmark:active {
+  color: #C1C6CE;
+
+  border-color: #C1C6CE;
+}
+
+.pagination-list li {
+  list-style: none;
+  border: 1px solid #E5E5E5;
+}
+
+.pagination-list:hover,
+.pagination-list:focus {
+  border-color: #BDC6CA;
+}
+/* Не работает */
+.pagination-list:active {
+  border-color: #EE3643;
+}
+
+.pagination-list .pagination-item-current {
+  background-color: #EE3643;
+  border-color: #EE3643;
+}
+
+.pagination-list a {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;;
+}
+
+.seo-text {
+  background-color: #F2F6F8;
+}
+
+.seo-text h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
 .main-footer {
   font-family:  "Cuprum", Arial, sans-serif;
   font-size: 18px;
@@ -227,7 +406,7 @@ a {
 .footer-navigation a:focus {
   text-decoration: underline;
 }
-/* Не работает */
+/* Не могу понять почему работает */
 .footer-navigation a:active {
   color: #F1F5F7;
 }
@@ -243,7 +422,7 @@ a {
 .navigation-catalog a:focus {
   text-decoration: underline;
 }
-/* Не работает */
+/* Не могу понять почему работает */
 .navigation-catalog a:active {
   color: #FFD180;
 }
