@@ -12,7 +12,7 @@
 <body>
   <header class="main-header">
     <div class="header-top">
-      <a class="logo"><img src="img/logo.svg">Техномарт</a>
+      <a class="logo" href="index.html"><img src="img/logo.svg">Техномарт</a>
       <input class="search" type="search" name="q" aria-label="Поиск" placeholder="Поиск:">
       <a class="link link-favorites" href="#">Закладки: 0</a>
       <a class="link link-basket" href="#">Корзина: 0</a>
@@ -26,14 +26,16 @@
         <p class="header-adress">г. Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
       </div>
 
-      <ul>
-        <li><a href="#">Равшан Джамшутович</a></li>
-        <li><a href="#">Выйти</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">Мои заказы</a></li>
-        <li><a href="#">Личный кабинет</a></li>
-      </ul>
+      <div class="user-navigation">
+        <ul class="button-user">
+          <li><a href="#">Равшан Джамшутович</a></li>
+          <li><a class="button-logout" href="#">Выйти</a></li>
+        </ul>
+        <ul class="link-profile">
+          <li><a href="#">Мои заказы</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+        </ul>
+      </div>
     </div>
 
     <nav class="box-navigation">
@@ -52,7 +54,7 @@
   <main class="page-catalog">
     <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
-      <li><a href="#">Каталог</a></li>
+      <li><a>Каталог</a></li>
       <li><a href="#">Инструмент</a></li>
       <li><a>Перфораторы</a></li>
     </ul>
@@ -190,12 +192,12 @@
 
   <footer class="main-footer">
     <div>
-      <a class="logo logo-footer"><img src="img/logo.svg">Техномарт</a>
+      <a class="logo logo-footer" href="index.html"><img src="img/logo.svg">Техномарт</a>
       <nav>
         <ul class="footer-navigation">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a>Каталог</a></li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>

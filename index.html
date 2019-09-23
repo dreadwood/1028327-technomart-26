@@ -25,10 +25,13 @@
         <a class="header-tel" href="tel:+7(812)555-05-55">+7(812)555-05-55</a>
         <p class="header-adress">г. Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
       </div>
-      <ul class="user-navigation">
-        <li><a class="button-login" href="#">Вход</a></li>
-        <li><a class="button-registration" href="#">Регистрация</a></li>
-      </ul>
+
+      <div class="user-navigation">
+        <ul class="button-user">
+          <li><a class="button-login" href="#">Вход</a></li>
+          <li><a class="button-registration" href="#">Регистрация</a></li>
+        </ul>
+      </div>
     </div>
 
     <nav class="box-navigation">
@@ -47,91 +50,91 @@
   <main>
     <h1 class="visually-hidden">Главная страница магазина "Техномарт"</h1>
 
-    <section>
+    <section class="banners">
       <h2 class="visually-hidden">Баннеры</h2>
-      <div>
+      <div class="banner banner-material">
         <h3>Материалы</h3>
-        <a href="#">На любой вкус</a>
+        <a class="banner-button" href="#">На любой вкус</a>
       </div>
-      <div>
+      <div class="banner banner-instrument">
         <h3>Инструмент</h3>
-        <a href="#">На все случаи</a>
+        <a class="banner-button" href="#">На все случаи</a>
       </div>
-      <div>
+      <div class="banner banner-technics">
         <h3>Техника</h3>
-        <a href="#">Для стройки</a>
+        <a class="banner-button" href="#">Для стройки</a>
       </div>
-      <div>
-        <div>
+      <div class="big-banners">
+        <div class="banner-perforator">
           <h3>Перфораторы</h3>
           <p>Настоящие мужчкие игрушки</p>
           <img src="img/banner-1.jpg" width="620" height="266" alt="Баннер перфораторы">
         </div>
-        <div>
+        <div class="banner-drill">
           <h3>Дрели</h3>
           <p>Соседям на радость!</p>
           <img src="img/banner-2.jpg" width="620" height="266" alt="Баннер перфораторы">
         </div>
         <button type="button">Назад</button>
         <button type="button">Вперед</button>
-        <a href="catalog.html">Открыть каталог</a>
+        <a class="button" href="catalog.html">Открыть каталог</a>
         <ul>
           <li><button type="button">Баннер 1</button></li>
           <li><button type="button">Баннер 2</button></li>
         </ul>
       </div>
-      <div>
+      <div class="banner banner-discount">
         <h3>Скидки 50%</h3>
-        <a href="#">На 350 товаров</a>
+        <a class="banner-button" href="#">На 350 товаров</a>
       </div>
-      <div>
+      <div class="banner banner-delivery">
         <h3>Доставка</h3>
-        <a href="#">Бесплатно</a>
+        <a class="banner-button" href="#">Бесплатно</a>
       </div>
     </section>
 
 
-    <section>
+    <section class="popular popular-article">
       <h2>Популярные товары</h2>
-      <a href="#">Все популярные товары:</a>
-      <ul>
+      <a class="button" href="#">Все популярные товары:</a>
+      <ul class="catalog-list">
         <li>
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <img src="img/Bosch9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
-          <p>32500₽</p>
-          <p>25500₽</p>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
+          <p class="old-price">32500₽</p>
+          <p class="price">25500₽</p>
+          <button class="button-buy" type="button">Купить</button>
+          <button class="button-bookmark" type="button">В закладки</button>
         </li>
         <li>
           <h3>Перфоратор BOSCH BFG 3000</h3>
           <img src="img/Bosch2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-          <p>22500₽</p>
-          <p>15500₽</p>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
+          <p class="old-price">22500 Р.</p>
+          <p class="price">15500 Р.</p>
+          <button class="button-buy" type="button">Купить</button>
+          <button class="button-bookmark" type="button">В закладки</button>
         </li>
         <li>
           <h3>Перфоратор BOSCH BFG 6000</h3>
           <img src="img/Bosch6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-          <p>30500₽</p>
-          <p>25500₽</p>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
+          <p class="old-price">30500 Р.</p>
+          <p class="price">25500 Р.</p>
+          <button class="button-buy" type="button">Купить</button>
+          <button class="button-bookmark" type="button">В закладки</button>
         </li>
         <li>
           <h3>Перфоратор BOSCH BFG 2000</h3>
           <img src="img/Bosch2000-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-          <p>12500₽</p>
-          <button type="button">Купить</button>
-          <button type="button">В закладки</button>
+          <p class="price">12500 Р.</p>
+          <button class="button-buy" type="button">Купить</button>
+          <button class="button-bookmark" type="button">В закладки</button>
         </li>
       </ul>
     </section>
 
-    <section>
+    <section class="popular popular-producer">
       <h2>Популярные производители:</h2>
-      <a href="#">Все производители</a>
+      <a class="button" href="#">Все производители</a>
       <ul>
         <li><a href="https://www.bosch.ru"><img src="img/bosch.png" width="126" height="37" alt="Лого Bosch"></a></li>
         <li><a href="http://www.makita.ru"><img src="img/Makita.png" width="123" height="40" alt="Лого Makita"></a></li>
@@ -144,13 +147,13 @@
       </ul>
     </section>
 
-    <section>
+    <section class="services">
       <h2>Сервисы</h2>
       <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
       <ul>
-        <li><button type="button">Доставка</button></li>
-        <li><button type="button">Гарантия</button></li>
-        <li><button type="button">Кредит</button></li>
+        <li><button class="button-service" type="button">Доставка</button></li>
+        <li><button class="button-service" type="button">Гарантия</button></li>
+        <li><button class="button-service" type="button">Кредит</button></li>
       </ul>
       <div>
         <h3>Доставка</h3>

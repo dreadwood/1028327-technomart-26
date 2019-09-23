@@ -39,15 +39,14 @@ a {
   border-bottom: 5px solid #B52932;
 }
 
-.header-top .logo:hover,
-.header-top .logo:focus {
+.logo[href]:hover,
+.logo[href]:focus {
   background-color: #CA2C37;
 }
 
-.header-top .logo:active {
+.logo[href]:active {
   background-color: #BA2732;
 }
-
 
 .header-top .search,
 .header-top .link {
@@ -117,11 +116,11 @@ a {
   line-height: 24px;
 }
 
-.user-navigation {
+.user-navigation li {
   list-style: none;
 }
 
-.user-navigation li {
+.button-user li {
   background-color: #ffffff;
 }
 
@@ -142,6 +141,24 @@ a {
 .button-login:active,
 .button-registration:active {
   color: #B2B2B2;
+}
+
+.button-user a {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+}
+
+.button-user a:active {
+  color: #B2B2B2;
+}
+
+.link-profile a {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425C;
+  text-decoration: underline;
 }
 
 .site-navigation {
@@ -168,6 +185,173 @@ a {
   background-color: #1D2739;
 }
 
+.banner h3 {
+  font-family:  "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.banner-button {
+  font-family:  "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.banner-material {
+  background-color: #FFBF47;
+}
+
+.banner-instrument {
+  background-color: #3BBCE3;
+}
+
+.banner-technics {
+  background-color: #DC91D8;
+}
+
+.banner-discount {
+  background-color: #8ED78F;
+}
+
+.banner-delivery {
+  background-color: #FFC047;
+}
+
+.big-banners {
+  background-color: #32425C;
+}
+
+.big-banners h3 {
+  font-family:  "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.big-banners p {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.big-banners ul {
+  list-style: none;
+}
+
+.big-banners li button {
+  background-color: #ffffff;
+  border-color: 2px solid #ffffff;
+}
+
+.big-banners li button:active {
+  background-color: #EE3643;
+}
+
+.button {
+  font-family:  "Cuprum", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #EE3643;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #CA2C37;
+}
+
+.button:active {
+  background-color: #BA2732;
+}
+
+.popular h2 {
+  font-family:  "Cuprum", Arial, sans-serif;
+  color: #32425C;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  background-color: #F9F5F0;
+}
+
+.popular-producer li {
+  list-style: none;
+  border: 1px solid #E5E5E5;
+}
+
+.popular-producer li:hover,
+.popular-producer li:focus {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.popular-producer li:active {
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+  opacity: 0.3;
+}
+
+.services {
+  background-color: #F5F8FA;
+}
+
+.services h2 {
+  font-family:  "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.services h3 {
+  font-family:  "Cuprum", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #32425C;
+  text-transform: uppercase;
+}
+
+.services li {
+  list-style: none;
+}
+
+.button-service {
+  font-family:  "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+
+  list-style: none;
+  background-color: #32425C;
+  border: none;
+}
+
+.button-service:hover,
+.button-service:focus {
+  background-color: #293449;
+}
+
+.button-service:active {
+  color: #32425C;
+
+  background-color: #ffffff;
+}
+
 .about-company h3 {
   font-family:  "Cuprum", Arial, sans-serif;
   font-size: 30px;
@@ -185,26 +369,6 @@ a {
   list-style: none;
 }
 
-.button {
-  font-family:  "Cuprum", Arial, sans-serif;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-
-  background-color: #EE3643;
-  border: none;
-}
-
-.button:hover,
-.button:focus {
-  background-color: #CA2C37;
-}
-
-.button:active {
-  background-color: #BA2732;
-}
-
 .breadcrumbs {
   list-style: none;
 }
@@ -212,6 +376,11 @@ a {
 .breadcrumbs a {
   color: #000000;
   line-height: 18px;
+}
+
+.breadcrumbs a[href]:hover,
+.breadcrumbs a[href]:focus {
+  text-decoration: underline;
 }
 
 .page-catalog h1 {
@@ -223,6 +392,7 @@ a {
 
   background-color: #F2F6F8;
 }
+
 .filters h2 {
   color: #000000;
   font-size: 13px;
@@ -267,6 +437,43 @@ a {
   text-align: center;
 
   border: 1px solid #E5E5E5;
+}
+
+
+.sort-list {
+  background-color: #F7F3EC
+}
+
+.sort-list h3 {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sort-list button {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #B2B2B2;
+
+  border-bottom: 1px dotted #EE3643;
+  background-color: transparent;
+}
+
+.sort-list button:hover,
+.sort-list button:focus {
+  color: #000000;
+
+  border-bottom: 1px solid #EE3643;
+}
+
+.sort-list button:activ {
+  color: #EE3643;
+  border: none;
+}
+
+.sort-list button[aria-label] {
+  border: none;
 }
 
 .catalog-list li {
@@ -406,14 +613,17 @@ a {
 .footer-navigation a:focus {
   text-decoration: underline;
 }
-/* Не могу понять почему работает */
+
 .footer-navigation a:active {
-  color: #F1F5F7;
+  color: #909AA8;
+
+  text-decoration: none;
 }
 
 .navigation-catalog {
   list-style: none;
 }
+
 .navigation-catalog a {
   color: #FFD180;
 }
@@ -422,9 +632,11 @@ a {
 .navigation-catalog a:focus {
   text-decoration: underline;
 }
-/* Не могу понять почему работает */
+
 .navigation-catalog a:active {
-  color: #FFD180;
+  color: #98896D;
+
+  text-decoration: none;
 }
 
 .footer-contacts {
