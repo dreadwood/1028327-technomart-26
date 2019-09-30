@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  min-width: 960px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -15,11 +15,37 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .modal {
   display: none;
 }
 
 .main-header {
+  min-height: 320px;
+
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
 
@@ -28,34 +54,117 @@ a {
 
 .header-top {
   background-color: #293449;
+  margin-bottom: 46px;
+}
+
+.header-top .container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
-  color: #ffffff;
-  font-size: 17px;
-  line-height: 18px;
+  width: 220px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background-color: #EE3643;
-  border-bottom: 5px solid #B52932;
+  box-shadow: 0 5px #B52932;
 }
 
 .logo[href]:hover,
 .logo[href]:focus {
   background-color: #CA2C37;
+  box-shadow: 0 5px #8D1D26;
 }
 
 .logo[href]:active {
   background-color: #BA2732;
+  box-shadow: 0 5px #8D1D26;
 }
 
 .header-top .search,
 .header-top .link {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
   color: #ffffff;
   font-size: 17px;
   line-height: 18px;
 
   background-color: #293449;
   border: none;
+}
+/* Нужно доделать форму поиска (добавить значек + изменение цвета */
+.header-top .search {
+  box-sizing: border-box;
+  width: 270px;
+  padding-left: 48px;
+}
+
+/* Нужно будет линки переименовать в баттоны */
+.header-top .link {
+  box-sizing: border-box;
+  width: 150px;
+}
+
+.link-favorites {
+  position: relative;
+  padding-left: 44px;
+}
+
+.link-favorites::before {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 17px;
+
+  width: 14px;
+  height: 16px;
+
+  background-image: url("../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.link-favorites:hover::before,
+.link-basket:hover::before,
+.link-favorites:focus::before,
+.link-basket:focus::before {
+  opacity: 1;
+}
+
+.link-favorites:active::before,
+.link-basket:active::before {
+  opacity: 0.5;
+}
+
+.link-basket {
+  position: relative;
+  padding-left: 49px;
+
+}
+
+.link-basket::before {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 18px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon-basket.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
 }
 
 .header-top .link:hover,
@@ -84,6 +193,7 @@ a {
 
 .header-top .link-order {
   background-color: #63A63E;
+  padding-left: 20px;
 }
 
 .header-top .link-order:hover,
@@ -95,40 +205,147 @@ a {
   background-color: #518534;
 }
 
+.header-center {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 39px;
+}
+
 .slogan {
+  width: 200px;
+  margin: 0px;
+  padding-top: 3px;
+  padding-left: 52px;
+
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
   color: #EE3643;
 }
 
-.header-tel {
-  font-size: 21px;
-  line-height: 21px;
-  text-align: center;
+.header-contact {
+  width: 270px;
+  margin-left: 18px;
+}
 
+.header-tel {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+
+  height: 45px;
+  padding-left: 71px;
+
+  font-size: 21px;
+  line-height: 39px;
+  vertical-align: middle;
   color: #EE3643;
+
   border: 3px solid #ffffff;
 }
 
+.header-tel::before {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 12px;
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .header-adress {
+  margin: 0px;
+  padding-top: 4px;
+
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
+  font-weight: 400px;
+  text-align: center;
+}
+
+.user-navigation {
+  min-width: 300px;
 }
 
 .user-navigation li {
   list-style: none;
 }
 
-.button-user li {
-  background-color: #ffffff;
+.users-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px;
+  padding: 0px;
 }
 
 .button-login,
 .button-registration {
+  display: block;
+  box-sizing: border-box;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+
   font-size: 21px;
   line-height: 21px;
   color: #000000;
+
+  background-color: #ffffff;
+}
+
+.button-login {
+  position: relative;
+  width: 121px;
+  margin-right: 10px;
+  padding-left: 48px;
+}
+
+.button-registration {
+  padding-left: 25px;
+}
+
+.button-login::before {
+  content: "";
+
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  width: 20px;
+  height: 17px;
+
+  background-image: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.button-login:hover::before,
+.button-login:focus::before,
+.button-profile:hover::before,
+.button-profile:focus::before,
+.button-logout:hover::before,
+.button-logout:focus::before {
+  opacity: 1;
+}
+
+.button-login:active::before,
+.button-profile:active::before,
+.button-logout:active::before {
+  opacity: 0.3;
+}
+
+.button-registration {
+  width: 150px;
 }
 
 .button-login:hover,
@@ -143,32 +360,130 @@ a {
   color: #B2B2B2;
 }
 
-.button-user a {
+.user-button {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  min-width: 45px;
+  height: 45px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+
   font-size: 21px;
   line-height: 21px;
   color: #000000;
-  text-align: center;
+
+  background-color: #ffffff;
 }
 
-.button-user a:active {
+.button-profile {
+  width: 254px;
+  padding-left: 46px;
+}
+
+.user-button:active {
   color: #B2B2B2;
 }
 
-.link-profile a {
+.button-profile::before {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  left: 13px;
+
+  width: 20px;
+  height: 18px;
+
+  background-image: url("../img/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.button-logout::before {
+  content: "";
+
+  position: absolute;
+  top: 14px;
+  right: 10px;
+
+  width: 20px;
+  height: 17px;
+
+  background-image: url("../img/icon-logout.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.3;
+}
+
+.user-profile {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0px;
+  margin-top: 5px;
+  padding: 0px;
+}
+
+.user-link {
+  margin-left: 19px;
+
   font-size: 16px;
-  line-height: 18px;
+  line-height: 17px;
   color: #32425C;
   text-decoration: underline;
 }
 
+.user-link-order {
+  margin-left: 18px;
+}
+
+.user-link-profile {
+  position: relative;
+
+  margin-left: 32px;
+}
+
+.user-link-profile::before {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: -17px;
+
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+
+  background-color: #32425C;
+}
+
+.box-navigation {
+  margin-bottom: 60px;
+}
+
 .site-navigation {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin: 0px;
+  padding-right: 26px;
+  padding-left: 20px;
 
   background-color: #32425C;
   box-shadow: 0 -5px #293449 inset;
 }
 
 .site-navigation a {
+  display: block;
+  padding: 20px 28px 23px 31px;
+
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
@@ -185,7 +500,8 @@ a {
   background-color: #1D2739;
 }
 
-.banner h3 {
+/* Главная (кроме «О компании» */
+ .banner-title {
   font-family:  "Cuprum", Arial, sans-serif;
   color: #ffffff;
   font-size: 24px;
@@ -204,31 +520,31 @@ a {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.banner-material {
+.banner-yellow {
   background-color: #FFBF47;
 }
 
-.banner-instrument {
+.banner-blue {
   background-color: #3BBCE3;
 }
 
-.banner-technics {
+.banner-purple {
   background-color: #DC91D8;
 }
 
-.banner-discount {
+.banner-green {
   background-color: #8ED78F;
 }
 
-.banner-delivery {
+.banner-yellow-2 {
   background-color: #FFC047;
 }
 
-.big-banners {
+.slider {
   background-color: #32425C;
 }
 
-.big-banners h3 {
+.slider-title {
   font-family:  "Cuprum", Arial, sans-serif;
   color: #ffffff;
   font-size: 36px;
@@ -236,26 +552,29 @@ a {
   font-weight: 700;
 }
 
-.big-banners p {
+.slider-text {
   color: #ffffff;
   font-size: 18px;
   line-height: 24px;
 }
 
-.big-banners ul {
+.nav-slider {
   list-style: none;
 }
 
-.big-banners li button {
+.nav-slider button {
   background-color: #ffffff;
   border-color: 2px solid #ffffff;
 }
 
-.big-banners li button:active {
+.nav-slider button:active {
   background-color: #EE3643;
 }
 
 .button {
+  box-sizing: border-box;
+  padding: 10px 0;
+
   font-family:  "Cuprum", Arial, sans-serif;
   color: #ffffff;
   font-size: 14px;
@@ -307,7 +626,7 @@ a {
   background-color: #F5F8FA;
 }
 
-.services h2 {
+.services-title {
   font-family:  "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -315,13 +634,19 @@ a {
   text-transform: uppercase;
 }
 
-.services h3 {
+.services-slide-title {
   font-family:  "Cuprum", Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   color: #32425C;
   text-transform: uppercase;
+}
+
+.services-slide-text {
+  margin: 0px;
+  padding: 0px;
+
 }
 
 .services li {
@@ -352,7 +677,24 @@ a {
   background-color: #ffffff;
 }
 
-.about-company h3 {
+/* Главная - о компании */
+.about-company {
+  display: flex;
+  justify-content: space-between;
+
+  min-height: 536px;
+}
+
+.company-box {
+  width: 520px;
+  margin-top: 79px;
+}
+
+.about-company-title {
+  margin: 0px;
+  margin-bottom: 26px;
+  padding: 0px;
+
   font-family:  "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -360,7 +702,20 @@ a {
   text-transform: uppercase;
 }
 
-.about-company ul {
+.about-company-text {
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 24px;
+}
+
+.about-company-list {
+  box-sizing: border-box;
+  margin: 0px;
+  margin-top: -3px;
+  margin-bottom: 37px;
+  margin-left: 36px;
+  padding: 0px;
+
   font-family:  "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 19px;
@@ -369,6 +724,57 @@ a {
   list-style: none;
 }
 
+.about-company-list li {
+  position: relative;
+  margin-bottom: 21px;
+}
+
+.about-company-list li::before {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: -36px;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: #EE3643;
+
+}
+
+.about-company-button {
+  display: block;
+  width: 220px;
+  min-height: 38px;
+  align-items:
+}
+
+.map-box {
+  width: 300px;
+  margin-top: 79px;
+}
+
+.about-map-text {
+  width: 185px;
+  margin: 0px;
+  margin-bottom: 7px;
+  padding: 0px;
+  padding-bottom: 24px;
+}
+
+.map-small {
+  margin: 0px;
+  margin-bottom: 37px;
+  padding: 0px;
+  border: none;
+}
+
+.write-us-button {
+  width: 300px;
+}
+
+/* Страница каталога */
 .breadcrumbs {
   list-style: none;
 }
@@ -383,7 +789,7 @@ a {
   text-decoration: underline;
 }
 
-.page-catalog h1 {
+.page-catalog-title {
   font-family: "Cuprum", Arial, sans-serif;
   color: #32425C;
   font-size: 30px;
@@ -393,7 +799,7 @@ a {
   background-color: #F2F6F8;
 }
 
-.filters h2 {
+.filters-title {
   color: #000000;
   font-size: 13px;
   line-height: 18px;
@@ -439,18 +845,18 @@ a {
   border: 1px solid #E5E5E5;
 }
 
-
 .sort-list {
   background-color: #F7F3EC
 }
 
-.sort-list h3 {
+.sort-list-title {
   font-size: 13px;
   line-height: 18px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
-.sort-list button {
+.sort-list a {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -460,33 +866,33 @@ a {
   background-color: transparent;
 }
 
-.sort-list button:hover,
-.sort-list button:focus {
+.sort-list a:hover,
+.sort-list a:focus {
   color: #000000;
 
   border-bottom: 1px solid #EE3643;
 }
 
-.sort-list button:activ {
+.sort-list a:active {
   color: #EE3643;
   border: none;
 }
-
-.sort-list button[aria-label] {
+/* Тут нужно как-то переписать селектор*/
+.sort-list a[aria-label] {
   border: none;
 }
 
-.catalog-list li {
+.catalog-item {
   list-style: none;
   border: 1px solid #E5E5E5;
 }
 
-.catalog-list li:hover,
-.catalog-list li:focus {
+.catalog-item:hover,
+.catalog-item:focus {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
-.catalog-list h3 {
+.catalog-title {
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
@@ -556,19 +962,22 @@ a {
 
 .pagination-list li {
   list-style: none;
+}
+
+.pagination-list a {
   border: 1px solid #E5E5E5;
 }
 
-.pagination-list:hover,
-.pagination-list:focus {
+.pagination-list a:hover,
+.pagination-list a:focus {
   border-color: #BDC6CA;
 }
-/* Не работает */
-.pagination-list:active {
+
+.pagination-list a:active {
   border-color: #EE3643;
 }
 
-.pagination-list .pagination-item-current {
+.pagination-item-current a{
   background-color: #EE3643;
   border-color: #EE3643;
 }
@@ -577,20 +986,21 @@ a {
   font-size: 13px;
   line-height: 18px;
   color: #000000;
-  text-transform: uppercase;;
+  text-transform: uppercase;
 }
 
 .seo-text {
   background-color: #F2F6F8;
 }
 
-.seo-text h2 {
+.seo-text-title {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
 }
 
+/* Блок футера */
 .main-footer {
   font-family:  "Cuprum", Arial, sans-serif;
   font-size: 18px;
@@ -603,6 +1013,34 @@ a {
 
 .footer-navigation {
   list-style: none;
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-line-1 {
+  margin-bottom: 33px;
+}
+
+.logo-footer {
+  height: 63px;
+}
+
+.logo-footer img {
+  width: 138px;
+  height: 23px;
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: space-between;
+
+  width: 548px;
+  margin: 0px;
+  margin-top: 38px;
+  padding: 0px;
 }
 
 .footer-navigation a {
@@ -620,8 +1058,25 @@ a {
   text-decoration: none;
 }
 
+.footer-line-2 {
+  margin-bottom: 49px;
+}
+
+.footer-adress {
+  width: 325px;
+  margin: 0px;
+  margin-left: 3px;
+  padding: 0px;
+}
+
 .navigation-catalog {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+
+  width: 525px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .navigation-catalog a {
@@ -642,28 +1097,113 @@ a {
 .footer-contacts {
   font-size: 16px;
   line-height: 18px;
+  min-height: 107px;
 
   background-color: #293449;
 }
 
-.footer-social {
-  text-align: center;
+.footer-copyright {
+  margin: 0px;
+  margin-top: 37px;
+  margin-left: 1px;
+  padding: 0px;
 }
 
 .footer-social {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 131px;
   list-style: none;
+  margin: 0px;
+  margin-top: 35px;
+  margin-left: 44px;
+  padding: 0px;
 }
 
 .social-button {
+  display: block;
+  position: relative;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+
+
   color: #FFFFFF;
 
   background-color: #212A3A;
+}
+
+.vk-button::before {
+  content: "";
+
+  position: absolute;
+
+  width: 26px;
+  height: 15px;
+
+  top: 13px;
+  left: 8px;
+
+  background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.facebook-button::before {
+  content: "";
+
+  position: absolute;
+
+  width: 12px;
+  height: 22px;
+
+  top: 10px;
+  left: 15px;
+
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.instagram-button::before {
+  content: "";
+
+  position: absolute;
+
+  width: 21px;
+  height: 21px;
+
+  top: 10px;
+  left: 10px;
+
+  background-image: url("../img/insta-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .social-button:hover,
 .social-button:focus,
 .social-button:active {
   background-color: #EE3643;
+}
+
+.contact-link-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 300px;
+  margin-top: 37px;
+}
+
+.contact-link {
+  margin: 0px;
+  padding: 0px;
+  max-width: 137px;
+}
+
+.contact-link:last-child {
+  width: 111px;
 }
 
 .contact-link a {
