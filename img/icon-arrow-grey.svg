@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="11px" height="10px" viewBox="0 0 11 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
-    <title>icon-arrow</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon-arrow" transform="translate(5.500000, 5.000000) scale(1, -1) translate(-5.500000, -5.000000) " fill="#C5C5C5">
-            <polyline id="Shape" points="5.5 10 0 0 11 0"></polyline>
-        </g>
-    </g>
-</svg>
+<svg height="10" viewBox="0 0 11 10" width="11" xmlns="http://www.w3.org/2000/svg"><path d="m5.5 10-5.5-10h11" fill="#c5c5c5" fill-rule="evenodd" transform="matrix(1 0 0 -1 0 10)"/></svg>
