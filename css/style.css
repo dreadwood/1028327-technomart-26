@@ -1051,9 +1051,9 @@ input[type="radio"].visually-hidden {
   width: 10px;
   height: 10px;
   padding: 5px;
+  vertical-align: middle;
 
   font-size: 0px;
-  vertical-align: middle;
 
   background-color: transparent;
   border: none;
@@ -2064,6 +2064,7 @@ input[type="radio"].visually-hidden {
   width: 95px;
   height: 38px;
   padding: 0;
+  vertical-align: middle;
 
   font-size: 17px;
   line-height: 18px;
@@ -2355,7 +2356,7 @@ input[type="radio"].visually-hidden {
   height: 18px;
 }
 
-.sort-list-filter-2 .active path {
+.sort-list-active path {
   fill: #EE3643;
 }
 
@@ -2382,14 +2383,11 @@ input[type="radio"].visually-hidden {
 
 .page-catalog .catalog-item {
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .page-catalog .catalog-item:nth-of-type(3n) {
   margin-right: 0;
-}
-
-.page-catalog .catalog-item {
-  margin-bottom: 20px;
 }
 
 .pagination-list {
