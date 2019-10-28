@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
 </head>
 
 <body>
@@ -71,39 +71,38 @@
         </div>
 
         <div class="sliders">
-          <div class="slider-item">
-            <h3 class="slider-title">Перфораторы</h3>
-            <p class="slider-text">Настоящие мужчкие игрушки</p>
-            <img class="slider-img" src="img/banner-1.jpg" width="620" height="266" alt="Баннер перфораторы">
-            <a class="red-button slider-button" href="catalog.html">Открыть каталог</a>
-          </div>
-
-          <div class="slider-item">
-            <h3 class="slider-title">Дрели</h3>
-            <p class="slider-text">Соседям на радость!</p>
-            <img class="slider-img" src="img/banner-2.jpg" width="620" height="266" alt="Баннер дрели">
-            <a class="red-button slider-button" href="catalog.html">Открыть каталог</a>
-          </div>
-
-            <button class="slider-button-previous" type="button">
-              <span class="visually-hidden">Назад</span>
-            </button>
-            <button class="slider-button-next" type="button">
-              <span class="visually-hidden">Вперед</span>
-            </button>
-
+          <input class="visually-hidden" type="radio" id="banner-1" name="toggle">
+          <input class="visually-hidden" type="radio" id="banner-2" name="toggle" checked>
           <ul class="slider-nav">
             <li>
-              <button class="slider-nav-dots" type="button">
-                <span class="visually-hidden">Баннер 1</span>
-              </button>
+              <label class="slider-nav-dots slider-nav-dots-1" for="banner-1">Баннер 1</label>
             </li>
-            <li class="active">
-              <button class="slider-nav-dots" type="button">
-                <span class="visually-hidden">Баннер 2</span>
-              </button>
+            <li>
+              <label class="slider-nav-dots slider-nav-dots-2" for="banner-2">Баннер 2</label>
             </li>
           </ul>
+
+          <button class="slider-button-previous" type="button">
+            <span class="visually-hidden">Назад</span>
+          </button>
+          <button class="slider-button-next" type="button">
+            <span class="visually-hidden">Вперед</span>
+          </button>
+
+          <div class="slider-list">
+            <div class="slider-item">
+              <h3 class="slider-title">Перфораторы</h3>
+              <p class="slider-text">Настоящие мужчкие игрушки</p>
+              <img class="slider-img" src="img/banner-1.jpg" width="620" height="266" alt="Баннер   перфораторы">
+              <a class="red-button slider-button" href="catalog.html">Открыть каталог</a>
+            </div>
+            <div class="slider-item">
+              <h3 class="slider-title">Дрели</h3>
+              <p class="slider-text">Соседям на радость!</p>
+              <img class="slider-img" src="img/banner-2.jpg" width="620" height="266" alt="Баннер   дрели">
+              <a class="red-button slider-button" href="catalog.html">Открыть каталог</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -228,12 +227,17 @@
       <div class="container">
         <h2 class="services-title">Сервисы</h2>
         <p class="services-text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+
         <div class="services-slider">
-          <ul class="services-slider-button">
-            <li><button class="services-button services-button-current" type="button">Доставка</button></li>
-            <li><button class="services-button" type="button">Гарантия</button></li>
-            <li><button class="services-button" type="button">Кредит</button></li>
-          </ul>
+          <input class="visually-hidden" type="radio" id="services-slide-1" name="services" checked>
+          <input class="visually-hidden" type="radio" id="services-slide-2" name="services">
+          <input class="visually-hidden" type="radio" id="services-slide-3" name="services">
+
+          <div class="services-slider-button">
+            <label class="services-button services-button-1" for="services-slide-1">Доставка</label>
+            <label class="services-button services-button-2" for="services-slide-2">Гарантия</label>
+            <label class="services-button services-button-3" for="services-slide-3">Кредит</label>
+          </div>
 
           <div class="services-slide-list">
             <div class="services-slide slide-delivery">
@@ -388,6 +392,6 @@
     </button>
   </section>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
